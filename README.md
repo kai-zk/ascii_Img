@@ -38,9 +38,10 @@ from PIL import Image
 import argparse
 下面是我们的字符画所使用的字符集，一共有 70 个字符，字符的种类与数量可以自己根据字符画的效果反复调试
 
-ascii_char = list("$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,\"^`'. ")
+`ascii_char = list("$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,\"^`'. ")`
 下面是RGB值转字符的函数：
 
+```python
 def get_char(r,g,b,alpha = 256):
     if alpha == 0:
         return ' '
@@ -49,6 +50,7 @@ def get_char(r,g,b,alpha = 256):
 
     unit = (256.0 + 1)/length
     return ascii_char[int(gray/unit)]
+```
 完整代码见：ascii.py 
 
 
